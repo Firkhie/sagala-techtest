@@ -34,7 +34,7 @@ export default function ColumnTable() {
   useEffect(() => {
     if (search) {
       const newData = data.filter((e) =>
-        e.name.toLowerCase().startsWith(search.toLowerCase()),
+        e.name.toLowerCase().includes(search.toLowerCase()),
       );
       setContents(newData);
     } else {
